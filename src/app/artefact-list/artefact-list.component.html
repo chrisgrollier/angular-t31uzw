@@ -1,0 +1,16 @@
+<h2>Artefacts</h2>
+
+<div *ngFor="let artefact of artefacts">
+ 
+  <h3>
+    <a [title]="artefact.name + ' details'" [routerLink]="['/artefacts', artefact.id]">
+      {{ artefact.name }}
+    </a>
+  </h3>
+  <p *ngIf="artefact.description">
+    Description: {{ artefact.description }}
+  </p>
+  <button (click)="share()">
+    Share
+  </button>
+</div>

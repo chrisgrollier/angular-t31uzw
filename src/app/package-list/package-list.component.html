@@ -1,8 +1,9 @@
 <h2>Packages</h2>
 
 <div *ngFor="let package of packages">
+ 
   <h3>
-    <a [title]="package.name + ' details'">
+    <a [title]="package.name + ' details'" [routerLink]="['/packages', package.id]">
       {{ package.name }}
     </a>
   </h3>

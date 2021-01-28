@@ -1,0 +1,8 @@
+<h2>{{ artefact.name }} Details</h2>
+<div *ngIf="artefact">
+	<p>Kind: {{ artefact.kind }}</p>
+	<p>Type: {{ artefact.type }}</p>
+	<p>description: {{artefact.comment}}</p>
+	<p>last major version: {{artefact.lastMajorVersion}}</p>
+	<p>road map: {{artefact.roadmapInfo}}</p>
+</div>

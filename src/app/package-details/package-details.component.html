@@ -1,0 +1,12 @@
+<h2>{{ package.name }} Details</h2>
+
+<div *ngIf="package">
+  <p>Kind: {{ package.kind }}</p>
+  <p>Type: {{ package.type }}</p>
+  <p>description: {{package.description}}</p>
+  <p>road map: {{package.roadmapInfo}}</p>
+  <p>versions: </p>
+  <div *ngFor="let version of package.versions">
+    <p>version: {{ version.version }}</p>
+  </div>
+</div>
