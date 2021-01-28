@@ -1,0 +1,24 @@
+<h2>Packages</h2>
+
+<div *ngFor="let package of packages">
+  <h3>
+    <a [title]="package.name + ' details'">
+      {{ package.name }}
+    </a>
+  </h3>
+  <p *ngIf="package.description">
+    Description: {{ package.description }}
+  </p>
+  <button (click)="share()">
+    Share
+  </button>
+  <app-package-details
+  [package]="package" (notify)="onNotify()">
+  </app-package-details>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
