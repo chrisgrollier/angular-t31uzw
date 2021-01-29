@@ -12,7 +12,9 @@ import { PackageDetailsComponent } from "./package-details/package-details.compo
 import { PackageService } from "./package.service";
 import { ArtefactListComponent } from "./artefact-list/artefact-list.component";
 import { ArtefactService } from "./artefact.service";
-import { ArtefactDetailsComponent } from './artefact-details/artefact-details.component';
+import { ArtefactDetailsComponent } from "./artefact-details/artefact-details.component";
+import { ArtefactVersionDetailsComponent } from "./artefact-version-details/artefact-version-details.component";
+import { ArtefactVersionService } from "./artefact-version.service";
 
 @NgModule({
   imports: [
@@ -23,7 +25,11 @@ import { ArtefactDetailsComponent } from './artefact-details/artefact-details.co
       { path: "", component: ArtefactListComponent },
       { path: "packages", component: PackageListComponent },
       { path: "packages/:packageId", component: PackageDetailsComponent },
-      { path: "artefacts/:artefactId", component: ArtefactDetailsComponent }
+      { path: "artefacts/:artefactId", component: ArtefactDetailsComponent },
+      {
+        path: "artefacts/:artefactId/versions/:versionId",
+        component: ArtefactVersionDetailsComponent
+      }
     ])
   ],
   declarations: [
@@ -33,10 +39,11 @@ import { ArtefactDetailsComponent } from './artefact-details/artefact-details.co
     PackageAlertsComponent,
     PackageDetailsComponent,
     ArtefactListComponent,
-    ArtefactDetailsComponent
+    ArtefactDetailsComponent,
+    ArtefactVersionDetailsComponent
   ],
   bootstrap: [AppComponent],
-  providers: [PackageService, ArtefactService]
+  providers: [PackageService, ArtefactService, ArtefactVersionService]
 })
 export class AppModule {}
 

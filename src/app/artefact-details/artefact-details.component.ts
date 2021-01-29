@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { SimpleArtefactView } from "../simple-artefact-view";
 import { ArtefactService } from "../artefact.service";
 @Component({
-  selector: 'app-artefact-details',
-  templateUrl: './artefact-details.component.html',
-  styleUrls: ['./artefact-details.component.css']
+  selector: "app-artefact-details",
+  templateUrl: "./artefact-details.component.html",
+  styleUrls: ["./artefact-details.component.css"]
 })
 export class ArtefactDetailsComponent implements OnInit {
-artefact: SimpleArtefactView;
+  artefact: SimpleArtefactView;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,5 +25,4 @@ artefact: SimpleArtefactView;
       .getArtefactView(artefactIdFromRoute)
       .subscribe(v => (this.artefact = v));
   }
-
 }

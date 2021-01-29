@@ -1,0 +1,18 @@
+<div *ngIf="artefactVersion">
+	<p>
+		<a [title]="artefactVersion.id + ' details'" [routerLink]="['/artefacts', artefactVersion.id]">
+			Retour {{ artefactVersion.name }}
+		</a>
+	</p>
+	<h3>{{ artefactVersion.name }} {{artefactVersion.version}} Details</h3>
+	<p>description: {{artefactVersion.versionDescription}}</p>
+	<p>last minor version: {{artefactVersion.lastMinorVersion}}</p>
+	<p>comment: {{artefactVersion.versionComment}}</p>
+	<p>criticity: {{artefactVersion.criticity}}</p>
+	<p>
+		used by:
+	</p>
+	<div *ngFor="let dependentVersion of version.usedBy">
+    <p>{{dependentVersion.name}} {{dependentVersion.version}}</p>
+	</div>
+</div>

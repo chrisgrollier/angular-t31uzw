@@ -1,8 +1,16 @@
-<h2>{{ artefact.name }} Details</h2>
 <div *ngIf="artefact">
-	<p>Kind: {{ artefact.kind }}</p>
-	<p>Type: {{ artefact.type }}</p>
-	<p>description: {{artefact.comment}}</p>
+	<h3>{{ artefact.name }} Details</h3>
+	<p>description: {{ artefact.description }}</p>
+	<p>kind: {{ artefact.kind }}</p>
+	<p>type: {{ artefact.type }}</p>
+	<p>comments: {{artefact.comment}}</p>
 	<p>last major version: {{artefact.lastMajorVersion}}</p>
 	<p>road map: {{artefact.roadmapInfo}}</p>
+	<p>referenced versions: </p>
+	<div *ngFor="let version of artefact.versions">
+		<a [title]="version.version + ' version details'"
+			[routerLink]="['/artefacts', artefact.id, 'versions', version.id]">
+			{{ version.version }}
+		</a>
+	</div>
 </div>
