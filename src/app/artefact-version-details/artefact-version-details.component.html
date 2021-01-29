@@ -9,10 +9,10 @@
 	<p>last minor version: {{artefactVersion.lastMinorVersion}}</p>
 	<p>comment: {{artefactVersion.versionComment}}</p>
 	<p>criticity: {{artefactVersion.criticity}}</p>
-	<p>
+	<h4>
 		used by:
-	</p>
+	</h4>
 	<div *ngFor="let dependentVersion of version.usedBy">
-    <p>{{dependentVersion.name}} {{dependentVersion.version}}</p>
+		<p> - {{dependentVersion.name}} {{dependentVersion.version}}</p>
 	</div>
 </div>
