@@ -4,7 +4,7 @@
 
 	<h3>
 		<a [title]="artefact.name + ' details'" [routerLink]="['/artefacts', artefact.id]">
-			{{ artefact.name }}
+			{{ artefact.name }}  ({{ artefact.kind }})
 		</a>
 	</h3>
 	<p *ngIf="artefact.description">
