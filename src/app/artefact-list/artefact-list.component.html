@@ -4,7 +4,7 @@
 
 	<h3>
 		<a [title]="artefact.name + ' details'" [routerLink]="['/artefacts', artefact.id]">
-			{{ artefact.name }}  ({{ artefact.kind }})
+			{{ artefact.name }} ({{ artefact.kind }})
 		</a>
 	</h3>
 	<p *ngIf="artefact.description">
@@ -16,8 +16,4 @@
 	<p *ngIf="artefact.lastMajorVersion">
 		Dernière version: {{ artefact.lastMajorVersion }}
 	</p>
-
-	<button (click)="share()">
-    Share
-  </button>
 </div>
