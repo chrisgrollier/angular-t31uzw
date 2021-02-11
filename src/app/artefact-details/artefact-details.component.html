@@ -1,7 +1,8 @@
 <div *ngIf="artefact">
 	<h3>{{ artefact.name }} Details</h3>
-	<p>Kind: <b>{{ artefact.kind }}</b> Type: <b>{{ artefact.type }}</b> Last Update:
-		<b>{{artefact.lastInfoUpdateDateTime | date:'medium'}}</b></p>
+	<p><label>kind: <span>{{ artefact.kind }}</span> </label> <label>type: <span>{{ artefact.type }}</span></label> <label>Last
+		update:
+		<span>{{artefact.lastInfoUpdateDateTime | date:'medium'}}</span></label></p>
 
 	<div>
 		<label>description: 
@@ -51,7 +52,6 @@
 	<button (click)="update()">update</button>
 
 	<div><label></label></div>
-
 
 	<h4>referenced versions: </h4>
 	<div *ngFor="let version of artefact.versions">

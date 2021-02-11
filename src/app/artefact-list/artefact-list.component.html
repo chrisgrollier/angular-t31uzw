@@ -8,12 +8,12 @@
 		</a>
 	</h3>
 	<p *ngIf="artefact.description">
-		Description: {{ artefact.description }}
+		<label>description: <span>{{ artefact.description }}</span></label>
 	</p>
 	<p *ngIf="artefact.comment">
-		Remarques: {{ artefact.comment }}
+		<label>comments: <span>{{ artefact.comment }}</span></label>
 	</p>
-	<p *ngIf="artefact.lastMajorVersion">
-		Dernière version: {{ artefact.lastMajorVersion }}
+	<p *ngIf="artefact.lastVersion">
+		<label>Last major version: <span>{{ artefact.lastVersion }}</span></label>
 	</p>
 </div>
