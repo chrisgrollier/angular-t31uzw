@@ -1,12 +1,59 @@
 <div *ngIf="artefact">
 	<h3>{{ artefact.name }} Details</h3>
-	<p>description: {{ artefact.description }}</p>
-	<p>kind: {{ artefact.kind }}</p>
-	<p>type: {{ artefact.type }}</p>
-	<p>comments: {{artefact.comment}}</p>
-	<p>last major version: {{artefact.lastMajorVersion}}</p>
-	<p>road map: {{artefact.roadmapInfo}}</p>
-	<p>referenced versions: </p>
+	<p>Kind: <b>{{ artefact.kind }}</b> Type: <b>{{ artefact.type }}</b> Last Update:
+		<b>{{artefact.lastInfoUpdateDateTime | date:'medium'}}</b></p>
+
+	<div>
+		<label>description: 
+      <textarea
+          rows="2" cols="60" maxLength="250"
+          [(ngModel)]="artefact.description"  placeholder="Enter artefact description"
+          ></textarea>
+    </label>
+	</div>
+	<div>
+		<label>comments: 
+      <textarea
+          rows="2" cols="60" maxLength="250"
+          [(ngModel)]="artefact.comment"  placeholder="Enter artefact comments"
+          ></textarea>
+    </label>
+	</div>
+	<div>
+		<label>roadmap: 
+      <textarea
+          rows="2" cols="60" maxLength="250"
+          [(ngModel)]="artefact.roadmapInfo" placeholder="Enter artefact roadmap info"
+          ></textarea>
+
+    </label>
+	</div>
+	<div>
+		<label>last major version: 
+      <input [(ngModel)]="artefact.lastVersion" placeholder="Enter a description for this artefact" />
+    </label>
+	</div>
+	<div>
+		<label>last release date: 
+      <input type="date" [(ngModel)]="artefact.lastRealeaseDate" />
+    </label>
+	</div>
+	<div>
+		<label>obsolescence level: 
+      <input type="number" [(ngModel)]="artefact.obsolescenceLevel"  />
+    </label>
+	</div>
+	<div>
+		<label>vulnerability level: 
+      <input type="number" [(ngModel)]="artefact.vulnerabilityLevel"  />
+    </label>
+	</div>
+	<button (click)="update()">update</button>
+
+	<div><label></label></div>
+
+
+	<h4>referenced versions: </h4>
 	<div *ngFor="let version of artefact.versions">
 		<a [title]="version.version + ' version details'"
 			[routerLink]="['/artefacts', artefact.id, 'versions', version.id]">

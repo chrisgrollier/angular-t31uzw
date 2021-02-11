@@ -6,5 +6,6 @@ export interface SimpleArtefactVersionView extends SimpleArtefactView {
   lastMinorVersion: string;
   versionDescription: string;
   versionComment: string;
+  versionLastInfoUpdateDateTime: Date;
   criticity: number;
 }

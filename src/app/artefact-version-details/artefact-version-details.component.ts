@@ -30,4 +30,13 @@ export class ArtefactVersionDetailsComponent implements OnInit {
       .getVersionView(artefactIdFromRoute, versionIdFromRoute)
       .subscribe(v => (this.version = v));
   }
+
+  update(): void {
+    this.artefactVersionService
+      .updateArtefactVersionInfoView(this.version.id, this.artefactVersion)
+      .subscribe(v => {
+        this.artefactVersion.versionLastInfoUpdateDateTime = v.versionLastInfoUpdateDateTime;
+        window.alert("The artefact version has been updated!");
+      });
+  }
 }

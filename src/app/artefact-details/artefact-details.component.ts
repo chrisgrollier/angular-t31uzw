@@ -25,4 +25,17 @@ export class ArtefactDetailsComponent implements OnInit {
       .getArtefactView(artefactIdFromRoute)
       .subscribe(v => (this.artefact = v));
   }
+
+  update(): void {
+    this.artefactService
+      .updateArtefactInfoView(this.artefact.id, this.artefact)
+      .subscribe(v => {
+        this.artefact.lastInfoUpdateDateTime = v.lastInfoUpdateDateTime;
+        window.alert("The artefact has been updated!");
+      });
+  }
+
+  back(): void {
+    ///this.location.back();
+  }
 }
