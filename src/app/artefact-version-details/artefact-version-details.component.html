@@ -5,13 +5,13 @@
 		</a>
 	</p>
 	<h3>{{ artefactVersion.name }} {{artefactVersion.version}} Details </h3>
-  <label>last update: <span>{{artefactVersion.versionLastInfoUpdateDateTime | date:'medium'}}</span></label>
-	
+	<label>last update: <span>{{artefactVersion.versionLastInfoUpdateDateTime | date:'medium'}}</span></label>
+
 	<div>
 		<label>description: 
       <textarea
           rows="2" cols="60" maxLength="250"
-          [(ngModel)]="artefactVersion.versionDescription"  placeholder="Enter artefact description"
+          [(ngModel)]="artefactVersion.versionDescription"  placeholder="Enter a description for this version"
           ></textarea>
     </label>
 	</div>
@@ -19,11 +19,15 @@
 		<label>comments: 
       <textarea
           rows="2" cols="60" maxLength="250"
-          [(ngModel)]="artefactVersion.versionComment"  placeholder="Enter artefact comments"
+          [(ngModel)]="artefactVersion.versionComment"  placeholder="Enter comments relative to this version"
           ></textarea>
     </label>
 	</div>
-	<p>last minor version: {{artefactVersion.lastMinorVersion}}</p>
+	<div>
+		<label>last minor version: 
+      <input [(ngModel)]="artefactVersion.lastMinorVersion" placeholder="Enter last minor version" />
+    </label>
+	</div>
 	<div>
 		<label>criticity: 
       <input type="number" [(ngModel)]="artefactVersion.criticity"  />

@@ -6,9 +6,9 @@ import { VersionView } from "./version-view";
 
 @Injectable()
 export class PackageVersionService {
-  private backUrl = "http://localhost:8080/api/packages";
+  private backUrl = "http://localhost:8080/api/v1/packages";
   private versionsUrl = "/versions";
-  private versionsBackUrl = "http://localhost:8080/api/package_versions";
+  private versionsBackUrl = "http://localhost:8080/api/v1/package_versions";
 
   constructor(private http: HttpClient) {}
 

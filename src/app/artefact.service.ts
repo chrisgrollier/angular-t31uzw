@@ -7,7 +7,7 @@ import { ArtefactInfoView } from "./artefact-info-view";
 
 @Injectable()
 export class ArtefactService {
-  private backUrl = "http://localhost:8080/api/artefacts";
+  private backUrl = "http://localhost:8080/api/v1/artefacts";
   private httpOptions = {
     headers: new HttpHeaders({ "Content-Type": "application/json" })
   };

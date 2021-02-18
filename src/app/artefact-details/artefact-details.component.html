@@ -1,6 +1,7 @@
 <div *ngIf="artefact">
 	<h3>{{ artefact.name }} Details</h3>
-	<p><label>kind: <span>{{ artefact.kind }}</span> </label> <label>type: <span>{{ artefact.type }}</span></label> <label>Last
+	<p><label>kind: <span>{{ artefact.kind }}</span> </label> <label>type: <span>{{ artefact.type }}</span></label>
+		<label>Last
 		update:
 		<span>{{artefact.lastInfoUpdateDateTime | date:'medium'}}</span></label></p>
 
@@ -8,7 +9,7 @@
 		<label>description: 
       <textarea
           rows="2" cols="60" maxLength="250"
-          [(ngModel)]="artefact.description"  placeholder="Enter artefact description"
+          [(ngModel)]="artefact.description"  placeholder="Enter a description for this artefact"
           ></textarea>
     </label>
 	</div>
@@ -16,7 +17,7 @@
 		<label>comments: 
       <textarea
           rows="2" cols="60" maxLength="250"
-          [(ngModel)]="artefact.comment"  placeholder="Enter artefact comments"
+          [(ngModel)]="artefact.comment"  placeholder="Enter comments for this artefact"
           ></textarea>
     </label>
 	</div>
@@ -24,14 +25,14 @@
 		<label>roadmap: 
       <textarea
           rows="2" cols="60" maxLength="250"
-          [(ngModel)]="artefact.roadmapInfo" placeholder="Enter artefact roadmap info"
+          [(ngModel)]="artefact.roadmapInfo" placeholder="Enter roadmap info for this artefact"
           ></textarea>
 
     </label>
 	</div>
 	<div>
 		<label>last major version: 
-      <input [(ngModel)]="artefact.lastVersion" placeholder="Enter a description for this artefact" />
+      <input [(ngModel)]="artefact.lastVersion" placeholder="Enter last major version" />
     </label>
 	</div>
 	<div>

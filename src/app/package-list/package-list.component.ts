@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 import { PackageService } from "../package.service";
 import { PackageView } from "../package-view";
@@ -8,7 +8,7 @@ import { PackageView } from "../package-view";
   templateUrl: "./package-list.component.html",
   styleUrls: ["./package-list.component.css"]
 })
-export class PackageListComponent {
+export class PackageListComponent implements OnInit {
   packages: PackageView[];
 
   constructor(private packageService: PackageService) {}
@@ -18,7 +18,7 @@ export class PackageListComponent {
   }
 
   loadPackageViews(): void {
-    this.packageService.getPackageViews().subscribe(v => this.packages = v);
+    this.packageService.getPackageViews().subscribe(v => (this.packages = v));
   }
 
   share() {

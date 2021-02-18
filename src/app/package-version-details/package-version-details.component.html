@@ -12,7 +12,9 @@
 	<h4>
 		dependencies:
 	</h4>
-	<div *ngFor="let dependency of version.dependencies">
-		<p> - {{dependency.name}} {{dependency.version}} ({{dependency.depth}}) ({{dependency.scope}})</p>
+	<div *ngIf="version">
+		<div *ngFor="let dependency of version.dependencies">
+			<p> - {{dependency.name}} {{dependency.version}} ({{dependency.depth}}) ({{dependency.scope}})</p>
+		</div>
 	</div>
 </div>

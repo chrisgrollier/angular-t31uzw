@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { PackageView } from "../package-view";
 import { PackageService } from "../package.service";
 
@@ -13,6 +13,7 @@ export class PackageDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private packageService: PackageService
   ) {}
 
@@ -25,5 +26,18 @@ export class PackageDetailsComponent implements OnInit {
     this.packageService
       .getPackageView(packageIdFromRoute)
       .subscribe(v => (this.package = v));
+  }
+
+  update(): void {
+    this.packageService
+      .updatePackageInfoView(this.package.id, this.package)
+      .subscribe(v => {
+        this.package.lastInfoUpdateDateTime = v.lastInfoUpdateDateTime;
+        window.alert("The package has been updated!");
+      });
+  }
+  
+  gotoList() {
+    this.router.navigate(["/"]);
   }
 }

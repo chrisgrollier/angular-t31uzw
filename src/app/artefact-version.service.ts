@@ -6,9 +6,9 @@ import { VersionView } from "./version-view";
 
 @Injectable()
 export class ArtefactVersionService {
-  private backUrl = "http://localhost:8080/api/artefacts";
+  private backUrl = "http://localhost:8080/api/v1/artefacts";
   private versionsUrl = "/versions";
-  private versionsBackUrl = "http://localhost:8080/api/artefact_versions";
+  private versionsBackUrl = "http://localhost:8080/api/v1/artefact_versions";
   private httpOptions = {
     headers: new HttpHeaders({ "Content-Type": "application/json" })
   };
