@@ -1,8 +1,6 @@
 <div *ngIf="packages">
 	<h2>{{ packages.length }} Packages</h2>
-
 	<div *ngFor="let package of packages">
-
 		<h3>
 			<a [title]="package.name + ' details'" [routerLink]="['/packages', package.id]">
 				{{ package.name }} ({{ package.kind }})

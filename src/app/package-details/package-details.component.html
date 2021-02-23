@@ -21,7 +21,7 @@
 	</div>
 	<p></p>
 	<button (click)="update()">update</button>
-	<p>versions: </p>
+	<h4>Analyzed versions: </h4>
 	<div *ngFor="let version of package.versions">
 		<a [title]="version.version + ' version details'"
 			[routerLink]="['/packages', package.id, 'versions', version.id]">
