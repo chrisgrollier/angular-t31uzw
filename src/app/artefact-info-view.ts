@@ -4,5 +4,5 @@ export interface ArtefactInfoView extends InfoView {
   roadmapInfo: string;
   vulnerabilityLevel: number;
   obsolescenceLevel: number;
-  lastRealeaseDate: Date;
+  lastReleaseDate: Date;
 }
