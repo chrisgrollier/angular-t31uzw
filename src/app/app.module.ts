@@ -19,6 +19,7 @@ import { ArtefactVersionService } from "./artefact-version.service";
 import { PackageVersionDetailsComponent } from "./package-version-details/package-version-details.component";
 import { PackageVersionService } from "./package-version.service";
 import { ArtefactLinksComponent } from "./artefact-links/artefact-links.component";
+import { ApplicationListComponent } from "./application-list/application-list.component";
 
 @NgModule({
   imports: [
@@ -27,8 +28,9 @@ import { ArtefactLinksComponent } from "./artefact-links/artefact-links.componen
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
+      { path: "", component: ApplicationListComponent },
+      { path: "packages", component: PackageListComponent },
       { path: "artefacts", component: ArtefactListComponent },
-      { path: "", component: PackageListComponent },
       { path: "packages/:packageId", component: PackageDetailsComponent },
       { path: "artefacts/:artefactId", component: ArtefactDetailsComponent },
       {
@@ -51,7 +53,8 @@ import { ArtefactLinksComponent } from "./artefact-links/artefact-links.componen
     ArtefactDetailsComponent,
     ArtefactVersionDetailsComponent,
     PackageVersionDetailsComponent,
-    ArtefactLinksComponent
+    ArtefactLinksComponent,
+    ApplicationListComponent
   ],
   bootstrap: [AppComponent],
   providers: [
