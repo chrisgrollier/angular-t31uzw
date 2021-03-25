@@ -1,0 +1,5 @@
+<span *ngIf="package">
+  <a href="javascript:void(0)" [title]="package.name + ' details'" (click)="downloadReport(package.kind, package.name)">
+    XL
+  </a>
+</span>

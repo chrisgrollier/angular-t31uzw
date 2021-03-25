@@ -20,6 +20,9 @@ import { PackageVersionDetailsComponent } from "./package-version-details/packag
 import { PackageVersionService } from "./package-version.service";
 import { ArtefactLinksComponent } from "./artefact-links/artefact-links.component";
 import { ApplicationListComponent } from "./application-list/application-list.component";
+import { ReportService } from "./report.service";
+import { ReportComponent } from "./report/report.component";
+import { ReportLinkComponent } from './report-link/report-link.component';
 
 @NgModule({
   imports: [
@@ -40,6 +43,11 @@ import { ApplicationListComponent } from "./application-list/application-list.co
       {
         path: "packages/:packageId/versions/:versionId",
         component: PackageVersionDetailsComponent
+      },
+      {
+        path: "report/:kind/:key",
+        
+        component: ReportComponent
       }
     ])
   ],
@@ -54,14 +62,17 @@ import { ApplicationListComponent } from "./application-list/application-list.co
     ArtefactVersionDetailsComponent,
     PackageVersionDetailsComponent,
     ArtefactLinksComponent,
-    ApplicationListComponent
+    ApplicationListComponent,
+    ReportComponent,
+    ReportLinkComponent
   ],
   bootstrap: [AppComponent],
   providers: [
     PackageService,
     ArtefactService,
     ArtefactVersionService,
-    PackageVersionService
+    PackageVersionService,
+    ReportService
   ]
 })
 export class AppModule {}
