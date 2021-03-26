@@ -21,8 +21,7 @@ import { PackageVersionService } from "./package-version.service";
 import { ArtefactLinksComponent } from "./artefact-links/artefact-links.component";
 import { ApplicationListComponent } from "./application-list/application-list.component";
 import { ReportService } from "./report.service";
-import { ReportComponent } from "./report/report.component";
-import { ReportLinkComponent } from './report-link/report-link.component';
+import { ReportLinkComponent } from "./report-link/report-link.component";
 
 @NgModule({
   imports: [
@@ -43,11 +42,6 @@ import { ReportLinkComponent } from './report-link/report-link.component';
       {
         path: "packages/:packageId/versions/:versionId",
         component: PackageVersionDetailsComponent
-      },
-      {
-        path: "report/:kind/:key",
-        
-        component: ReportComponent
       }
     ])
   ],
@@ -63,7 +57,6 @@ import { ReportLinkComponent } from './report-link/report-link.component';
     PackageVersionDetailsComponent,
     ArtefactLinksComponent,
     ApplicationListComponent,
-    ReportComponent,
     ReportLinkComponent
   ],
   bootstrap: [AppComponent],
