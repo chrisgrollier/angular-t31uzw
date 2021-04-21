@@ -22,6 +22,7 @@ import { ArtefactLinksComponent } from "./artefact-links/artefact-links.componen
 import { ApplicationListComponent } from "./application-list/application-list.component";
 import { ReportService } from "./report.service";
 import { ReportLinkComponent } from "./report-link/report-link.component";
+import { SpacesComponent } from './spaces/spaces.component';
 
 @NgModule({
   imports: [
@@ -57,7 +58,8 @@ import { ReportLinkComponent } from "./report-link/report-link.component";
     PackageVersionDetailsComponent,
     ArtefactLinksComponent,
     ApplicationListComponent,
-    ReportLinkComponent
+    ReportLinkComponent,
+    SpacesComponent
   ],
   bootstrap: [AppComponent],
   providers: [
