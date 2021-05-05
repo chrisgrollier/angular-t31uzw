@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { SimpleArtefactView } from "../simple-artefact-view";
-import { ArtefactService } from "../service/artefact.service";
+import { SimpleArtefactView } from "../../model/simple-artefact-view";
+import { ArtefactService } from "../../service/artefact.service";
 @Component({
   selector: "app-artefact-details",
   templateUrl: "./artefact-details.component.html",

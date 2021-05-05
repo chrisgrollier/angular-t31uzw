@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { PackageVersionService } from "../service/package-version.service";
-import { SimpleArtefactVersionView } from "../simple-artefact-version-view";
-import { VersionView } from "../version-view";
+import { PackageVersionService } from "../../service/package-version.service";
+import { SimpleArtefactVersionView } from "../../model/simple-artefact-version-view";
+import { VersionView } from "../../model/version-view";
 
 @Component({
   selector: "app-package-version-details",

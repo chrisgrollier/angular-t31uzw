@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
-import { PackageService } from "../service/package.service";
-import { PackageView } from "../package-view";
+import { PackageService } from "../../service/package.service";
+import { PackageView } from "../../model/package-view";
 
 @Component({
   selector: "app-package-list",

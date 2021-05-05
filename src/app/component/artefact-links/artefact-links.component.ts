@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { SimpleArtefactView } from "../simple-artefact-view";
+import { SimpleArtefactView } from "../../model/simple-artefact-view";
 
 @Component({
   selector: "app-artefact-links",

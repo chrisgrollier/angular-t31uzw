@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, of } from "rxjs";
-import { PackageView } from "./package-view";
-import { PackageInfoView } from "./package-info-view";
+import { PackageView } from "../model/package-view";
+import { PackageInfoView } from "../model/package-info-view";
 
 @Injectable({ providedIn: "root" })
 export class PackageService {

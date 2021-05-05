@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, of } from "rxjs";
-import { SimpleArtefactView } from "./simple-artefact-view";
-import { ArtefactView } from "./artefact-view";
-import { ArtefactInfoView } from "./artefact-info-view";
+import { SimpleArtefactView } from "../model/simple-artefact-view";
+import { ArtefactView } from "../model/artefact-view";
+import { ArtefactInfoView } from "../model/artefact-info-view";
 
 @Injectable()
 export class ArtefactService {

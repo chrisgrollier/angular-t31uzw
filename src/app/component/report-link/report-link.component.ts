@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { PackageView } from "../package-view";
+import { PackageView } from "../../model/package-view";
 import { ReportService } from "../../service/report.service";
 
 @Component({

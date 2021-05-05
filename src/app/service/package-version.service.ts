@@ -1,8 +1,8 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { SimpleArtefactVersionView } from "./simple-artefact-version-view";
-import { VersionView } from "./version-view";
+import { SimpleArtefactVersionView } from "../model/simple-artefact-version-view";
+import { VersionView } from "../model/version-view";
 
 @Injectable()
 export class PackageVersionService {

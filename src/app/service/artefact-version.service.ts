@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
-import { SimpleArtefactVersionView } from "./simple-artefact-version-view";
+import { SimpleArtefactVersionView } from "../model/simple-artefact-version-view";
 import { VersionView } from "./version-view";
 
 @Injectable()
