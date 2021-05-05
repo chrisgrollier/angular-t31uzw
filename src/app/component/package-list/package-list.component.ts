@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 
-import { PackageService } from "../package.service";
+import { PackageService } from "../service/package.service";
 import { PackageView } from "../package-view";
 
 @Component({

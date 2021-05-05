@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 
-import { ArtefactService } from "../artefact.service";
+import { ArtefactService } from "../service/artefact.service";
 import { SimpleArtefactView } from "../simple-artefact-view";
 
 @Component({

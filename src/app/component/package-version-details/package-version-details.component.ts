@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { PackageVersionService } from "../package-version.service";
+import { PackageVersionService } from "../service/package-version.service";
 import { SimpleArtefactVersionView } from "../simple-artefact-version-view";
 import { VersionView } from "../version-view";
 

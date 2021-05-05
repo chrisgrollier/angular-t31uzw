@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { PackageView } from "../package-view";
-import { ReportService } from "../report.service";
+import { ReportService } from "../../service/report.service";
 
 @Component({
   selector: "app-report-link",

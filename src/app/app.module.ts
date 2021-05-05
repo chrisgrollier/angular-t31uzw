@@ -5,24 +5,24 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 
-import { AppComponent } from "./app.component";
-import { TopBarComponent } from "./top-bar/top-bar.component";
-import { PackageListComponent } from "./package-list/package-list.component";
-import { PackageAlertsComponent } from "./package-alerts/package-alerts.component";
-import { PackageDetailsComponent } from "./package-details/package-details.component";
-import { PackageService } from "./package.service";
-import { ArtefactListComponent } from "./artefact-list/artefact-list.component";
-import { ArtefactService } from "./artefact.service";
-import { ArtefactDetailsComponent } from "./artefact-details/artefact-details.component";
-import { ArtefactVersionDetailsComponent } from "./artefact-version-details/artefact-version-details.component";
-import { ArtefactVersionService } from "./artefact-version.service";
-import { PackageVersionDetailsComponent } from "./package-version-details/package-version-details.component";
-import { PackageVersionService } from "./package-version.service";
-import { ArtefactLinksComponent } from "./artefact-links/artefact-links.component";
-import { ApplicationListComponent } from "./application-list/application-list.component";
-import { ReportService } from "./report.service";
-import { ReportLinkComponent } from "./report-link/report-link.component";
-import { SpacesComponent } from './spaces/spaces.component';
+import { AppComponent } from "./component/app.component";
+import { TopBarComponent } from "./component/top-bar/top-bar.component";
+import { PackageListComponent } from "./component/package-list/package-list.component";
+import { PackageAlertsComponent } from "./component/package-alerts/package-alerts.component";
+import { PackageDetailsComponent } from "./component/package-details/package-details.component";
+import { PackageService } from "./service/package.service";
+import { ArtefactListComponent } from "./component/artefact-list/artefact-list.component";
+import { ArtefactService } from "./service/artefact.service";
+import { ArtefactDetailsComponent } from "./component/artefact-details/artefact-details.component";
+import { ArtefactVersionDetailsComponent } from "./component/artefact-version-details/artefact-version-details.component";
+import { ArtefactVersionService } from "./service/artefact-version.service";
+import { PackageVersionDetailsComponent } from "./component/package-version-details/package-version-details.component";
+import { PackageVersionService } from "./service/package-version.service";
+import { ArtefactLinksComponent } from "./component/artefact-links/artefact-links.component";
+import { ApplicationListComponent } from "./component/application-list/application-list.component";
+import { ReportService } from "./service/report.service";
+import { ReportLinkComponent } from "./component/report-link/report-link.component";
+import { SpacesComponent } from "./component/spaces/spaces.component";
 
 @NgModule({
   imports: [

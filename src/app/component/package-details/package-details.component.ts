@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { PackageView } from "../package-view";
-import { PackageService } from "../package.service";
+import { PackageService } from "../service/package.service";
 
 @Component({
   selector: "app-package-details",
