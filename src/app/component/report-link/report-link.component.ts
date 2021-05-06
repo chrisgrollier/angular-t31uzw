@@ -15,7 +15,7 @@ export class ReportLinkComponent implements OnInit {
   ngOnInit() {}
   downloadReport(kind: string, name: string) {
     this.reportService
-      .getExcelReportByKindAndName(kind, name)
+      .getExcelReportByKindAndGroup(kind, name)
       .subscribe(data => {
         this.download(
           new Blob([data], { type: "application/vnd.ms-excel" }),
@@ -23,15 +23,14 @@ export class ReportLinkComponent implements OnInit {
         );
       });
   }
+
   downloadReportGlobal() {
-    this.reportService
-      .getExcelReportAllDeployable()
-      .subscribe(data => {
-        this.download(
-          new Blob([data], { type: "application/vnd.ms-excel" }),
-          "all.xls"
-        );
-      });
+    this.reportService.getExcelReportAllDeployable().subscribe(data => {
+      this.download(
+        new Blob([data], { type: "application/vnd.ms-excel" }),
+        "all.xls"
+      );
+    });
   }
 
   private download(blob: Blob, name: string) {

@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, of } from "rxjs";
 import { PackageView } from "../model/package-view";
 import { PackageInfoView } from "../model/package-info-view";
+import { GroupedArtefactView } from "../model/grouped-artefact-view";
 
 @Injectable({ providedIn: "root" })
 export class PackageService {
@@ -19,8 +20,8 @@ export class PackageService {
     return this.http.get<PackageView[]>(this.backPackagesUrl);
   }
 
-  getApplicationViews(): Observable<PackageView[]> {
-    return this.http.get<PackageView[]>(this.backApplicationsUrl);
+  getApplicationViews(): Observable<GroupedArtefactView[]> {
+    return this.http.get<GroupedArtefactView[]>(this.backApplicationsUrl);
   }
   getPackageView(id: number): Observable<PackageView> {
     return this.http.get<PackageView>(this.backPackagesUrl + "/" + id);

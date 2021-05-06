@@ -17,6 +17,16 @@ export class ReportService {
     );
   }
 
+  getExcelReportByKindAndGroup(kind: string, name: string): Observable<Blob> {
+    return this.http.get(
+      this.backReportUrl + "?kind=" + kind + "&group=" + name,
+      {
+        responseType: "blob",
+        headers: new HttpHeaders({ Accept: "application/vnd.ms-excel" })
+      }
+    );
+  }
+
   getExcelReportAllDeployable(): Observable<Blob> {
     return this.http.get(this.backReportUrl, {
       responseType: "blob",

@@ -4,9 +4,9 @@
   </h2>
   <div *ngFor="let application of applications">
     <h3>
-      <a [title]="application.name + ' details'" [routerLink]="['/packages', application.id]">
+      
         {{ application.name }} ({{ application.kind }})
-      </a>
+      
       <app-report-link [package]="application">
       </app-report-link>
     </h3>
